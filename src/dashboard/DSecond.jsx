@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { AppBar, Avatar, Box, CssBaseline, Drawer, IconButton, Icon, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography, Input, InputAdornment, Divider, SliderUnstyled } from '@mui/material'
+import { AppBar, Avatar, Box, CssBaseline, Drawer, IconButton, Icon, List, ListItem, ListItemIcon, ListItemText, Toolbar, Typography, Input, InputAdornment, Divider } from '@mui/material'
 import { Favorite, Menu, StarRounded, Tune } from '@mui/icons-material';
 import { makeStyles } from '@mui/styles';
 import { styled } from '@mui/material/styles';
@@ -460,13 +460,13 @@ const DSecond = (props) => {
           <div className={classes.cont}>
             <Typography variant="p" className={classes.contHeader}>New restaurants</Typography>
             <span style={{flexGrow: 1}}></span>
-            <Box sx={{ width: 260 }}>
+            {/* <Box sx={{ width: 260 }}>
               <StyledSlider 
                 defaultValue={4}
                 max={8}
                 valueLabelDisplay="on"
               />
-            </Box>
+            </Box> */}
           </div>
           <Box className={classes.restaurantList}>
             {
@@ -511,62 +511,62 @@ DSecond.propTypes = {
 
 export default DSecond
 
-const StyledSlider = styled(SliderUnstyled)(
-  ({ theme }) => `
-  color: ${theme.palette.mode === 'light' ? '#181818' : '#f1f1f1'};
-  height: 4px;
-  width: 100%;
-  padding: 13px 0;
-  display: inline-block;
-  position: relative;
-  cursor: pointer;
-  touch-action: none;
-  -webkit-tap-highlight-color: transparent;
-  opacity: 0.75;
-  &:hover {
-    opacity: 1;
-  }
+// const StyledSlider = styled(SliderUnstyled)(
+//   ({ theme }) => `
+//   color: ${theme.palette.mode === 'light' ? '#181818' : '#f1f1f1'};
+//   height: 4px;
+//   width: 100%;
+//   padding: 13px 0;
+//   display: inline-block;
+//   position: relative;
+//   cursor: pointer;
+//   touch-action: none;
+//   -webkit-tap-highlight-color: transparent;
+//   opacity: 0.75;
+//   &:hover {
+//     opacity: 1;
+//   }
 
-  & .MuiSlider-valueLabel {
-    position: absolute;
-    top: -30px;
-    left: -15px;
-    background-color: #1818181c;
-    border-radius: 50px;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 2px 15px;
-  }
+//   & .MuiSlider-valueLabel {
+//     position: absolute;
+//     top: -30px;
+//     left: -15px;
+//     background-color: #1818181c;
+//     border-radius: 50px;
+//     font-size: 12px;
+//     font-weight: 600;
+//     padding: 2px 15px;
+//   }
 
-  & .MuiSlider-rail {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #b1b1b1;
-    opacity: 0.38;
-  }
+//   & .MuiSlider-rail {
+//     display: block;
+//     position: absolute;
+//     width: 100%;
+//     height: 4px;
+//     border-radius: 2px;
+//     background-color: #b1b1b1;
+//     opacity: 0.38;
+//   }
 
-  & .MuiSlider-track {
-    display: block;
-    position: absolute;
-    height: 4px;
-    border-radius: 2px;
-    background-color: currentColor;
-  }
+//   & .MuiSlider-track {
+//     display: block;
+//     position: absolute;
+//     height: 4px;
+//     border-radius: 2px;
+//     background-color: currentColor;
+//   }
 
-  & .MuiSlider-thumb {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    margin-left: -6px;
-    margin-top: -5px;
-    box-sizing: border-box;
-    border-radius: 50%;
-    outline: 0;
-    border: 3px solid currentColor;
-    background-color: #fff;
-  }
-`,
-);
+//   & .MuiSlider-thumb {
+//     position: absolute;
+//     width: 14px;
+//     height: 14px;
+//     margin-left: -6px;
+//     margin-top: -5px;
+//     box-sizing: border-box;
+//     border-radius: 50%;
+//     outline: 0;
+//     border: 3px solid currentColor;
+//     background-color: #fff;
+//   }
+// `,
+// );
